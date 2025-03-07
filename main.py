@@ -1,7 +1,7 @@
 import os
 
 from scrape import scraper_start
-
+from parse_tables import html_to_csv
 
 def create_folder(path):
   try:
@@ -16,5 +16,5 @@ def create_folder(path):
 url_start = "https://myanimelist.net/topanime.php?limit={}"
 options = 1000
 
-scraper_start(url_start,options)
-
+#scraper_start(url_start,options)
+html_to_csv(options)
